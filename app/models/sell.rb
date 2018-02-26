@@ -1,5 +1,11 @@
 class Sell < ApplicationRecord
   include Fae::BaseModelConcern
+
+  has_many :sell_products
+  has_many :products, through: :sell_products
+
+  has_many :sell_services
+  has_many :services, through: :sell_services
   
   validates :client, presence: true
 
