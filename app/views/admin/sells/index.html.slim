@@ -8,6 +8,7 @@ main.content
         th Date
         th Client
         th Total
+        th.-action-wide Created 
         th.-action-wide Modified
         th.-action data-sorter="false"
 
@@ -19,6 +20,7 @@ main.content
             td = item.date
             td = item.client.name
             td = item.total
+            td = fae_date_format item.created_at
             td = fae_date_format item.updated_at
             td = fae_delete_button item
       - else
