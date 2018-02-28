@@ -39,7 +39,7 @@ services:
       - '.:/petadmin'
     volumes_from:
     - box
-
+  
   box:
     image: busybox
     volumes:
